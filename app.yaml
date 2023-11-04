@@ -1,0 +1,12 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files:  web_portfolio/profile.html
+  upload:  web_portfolio/profile.html
+
+- url: /(.*)
+  static_files:  web_portfolio/\1
+  upload:  web_portfolio/(.*)
